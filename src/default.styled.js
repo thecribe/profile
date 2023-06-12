@@ -11,6 +11,7 @@ const DefaultStyle = createGlobalStyle`
    body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.15em;
+    background-color: ${({ theme }) => theme.background};
    }
 
    @media (max-width: 768px){
