@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const DefaultStyle = createGlobalStyle`
    *{
@@ -23,6 +23,12 @@ const DefaultStyle = createGlobalStyle`
 
    .icon{
       margin-right:1rem;
+      transition: all .5s ease-in-out;
+
+      &:hover{
+         color: ${({ theme }) => theme.secondary};
+         cursor: pointer;
+      }
    }
 
    @media (max-width: 768px){
@@ -31,5 +37,18 @@ const DefaultStyle = createGlobalStyle`
     }
    }
 `;
+
+export const ButtonStyled = styled.button`
+  background-color: ${({ type, theme }) =>
+    type === "transparent" ? theme.primary : theme.secondary};
+`;
+
+// {
+//     if (type === "btn-filled") {
+//       return ({ theme }) => theme.secondary;
+//     } else {
+//       return ({ theme }) => theme.primary;
+//     }
+//   }};
 
 export default DefaultStyle;

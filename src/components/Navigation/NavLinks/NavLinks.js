@@ -1,6 +1,14 @@
 import React from "react";
-import { FaBox, FaHome, FaServicestack, FaUser } from "react-icons/fa";
+import {
+  FaBox,
+  FaGripVertical,
+  FaHome,
+  FaServicestack,
+  FaUser,
+} from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
+import { MdOutlineMessage } from "react-icons/md";
+import { AiOutlineMail } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
 const NavLinks = () => {
@@ -39,19 +47,19 @@ const NavLinks = () => {
         </li>
         <li>
           <NavLink to="#" className="links">
-            <FaHome className="icon" />
+            <FaGripVertical className="icon" />
             <span id="link-name">Portfolio</span>
           </NavLink>
         </li>
         <li>
           <NavLink to="#" className="links">
-            <FaHome className="icon" />
+            <MdOutlineMessage className="icon" />
             <span id="link-name">Testimonial</span>
           </NavLink>
         </li>
         <li>
           <NavLink to="#" className="links">
-            <FaHome className="icon" />
+            <AiOutlineMail className="icon" />
             <span id="link-name">Contact</span>
           </NavLink>
         </li>

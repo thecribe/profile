@@ -22,8 +22,35 @@ export const NavLinkStyled = styled.nav`
   border: 1px solid ${({ theme }) => theme.accent};
   padding: 1rem;
   border-radius: 3rem;
-  width: fit-content;
 
+  .hamburger {
+    display: none;
+    border: 1px solid transparent;
+    padding: 0.5rem;
+    transition: all 0.5s ease-in-out;
+    .hamburger-line {
+      width: 30px;
+      height: 2px;
+      background-color: ${({ theme }) => theme.primary};
+      &:not(:last-child) {
+        margin-bottom: 0.7rem;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      border: 1px solid ${({ theme }) => theme.accent};
+      padding: 0.5rem;
+    }
+
+    &:active {
+      transform: scale(1);
+      cursor: pointer;
+      border: 1px solid ${({ theme }) => theme.accent};
+      padding: 0.5rem;
+    }
+  }
   .icon {
     margin: 0;
     transition: all 0.5s ease-in-out;
@@ -59,6 +86,20 @@ export const NavLinkStyled = styled.nav`
     transform: translateX(-1%);
     text-align: left;
     animation: fade-in 0.8s forwards;
+  }
+
+  @media (max-width: 768px) {
+    border: none;
+    padding: 2rem;
+    border-radius: none;
+    ul {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+      color: white;
+    }
   }
 
   @keyframes fade-in {
