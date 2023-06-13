@@ -8,53 +8,51 @@ import {
 import DefaultStyle from "./default.styled";
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
+import Homepage from "./pages/Homepage";
 
-const defaultSettings = {
+const themeDefaultSettings = {
   colors: {
     dark: {
-      background: "#000000",
+      background: "#1f1f1f",
       primary: "#ffffff",
       secondary: "#28e98c",
       accent: "#999999",
     },
+
     light: {
       background: "#ffffff",
-      primary: "#000000",
+      primary: "#1f1f1f",
       secondary: "#28e98c",
       accent: "#999999",
     },
   },
 };
-
 const Root = () => {
   const [mode, setMode] = useState(true);
-  const [theme, setTheme] = useState({
-    background: "#000000",
-    primary: "#ffffff",
-    secondary: "#28e98c",
-    accent: "#999999",
-  });
+  const [theme, setTheme] = useState({ ...themeDefaultSettings.colors.dark });
 
-  const switchHanlder = (mode) => {
-    if (mode) {
-      setTheme({ ...theme, ...defaultSettings.colors.light });
-    } else {
-      setTheme({ ...theme, ...defaultSettings.colors.dark });
-    }
+  const themeSwitchHandler = (mode) => {
+    mode
+      ? setTheme({ ...theme, ...themeDefaultSettings.colors.light })
+      : setTheme({ ...theme, ...themeDefaultSettings.colors.dark });
+
     setMode(!mode);
   };
 
   return (
     <ThemeProvider theme={theme}>
       <DefaultStyle />
-      <Outlet />
-      <button onClick={() => switchHanlder(mode)}>click me</button>
+      <Outlet context={{ mode, themeSwitchHandler }} />
     </ThemeProvider>
   );
 };
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/" element={<Root />}></Route>)
+  createRoutesFromElements(
+    <Route path="/" element={<Root />}>
+      <Route path="/" element={<Homepage />} />
+    </Route>
+  )
 );
 
 const App = () => {
