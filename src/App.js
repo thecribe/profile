@@ -8,7 +8,7 @@ import {
 import DefaultStyle from "./default.styled";
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
-import Homepage from "./pages/Homepage";
+import Homepage from "./pages/Homepage/Homepage";
 
 const themeDefaultSettings = {
   colors: {
