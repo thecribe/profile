@@ -4,10 +4,15 @@ export const HomepageStyled = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;
 
 export const SidebarStyled = styled.div`
-  flex: 1;
+  flex: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,5 +42,5 @@ export const SidebarStyled = styled.div`
 `;
 
 export const ContentBarStyled = styled.div`
-  flex: 3;
+  flex: 5;
 `;

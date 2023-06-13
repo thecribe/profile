@@ -31,7 +31,7 @@ const DefaultStyle = createGlobalStyle`
       }
    }
 
-   @media (max-width: 768px){
+   @media (max-width: ${({ theme }) => theme.mobile}){
     html{
      font-size: 70%;
     }
@@ -40,7 +40,41 @@ const DefaultStyle = createGlobalStyle`
 
 export const ButtonStyled = styled.button`
   background-color: ${({ type, theme }) =>
-    type === "transparent" ? theme.primary : theme.secondary};
+    type === "transparent" ? "transparent" : theme.secondary};
+  width: 100%;
+  padding: 1rem 0rem;
+  border: 1px solid
+    ${({ type, theme }) =>
+      type === "transparent" ? theme.secondary : "transparent"};
+  border-radius: 5rem;
+  transition: all 0.5s ease-in-out;
+  margin: 1rem 0;
+
+  .links {
+    color: ${({ type, theme }) =>
+      type === "transparent" ? theme.secondary : "#000000"};
+    font-size: 1.2em;
+    transition: all 0.5s ease-in-out;
+
+    .icons {
+      margin-right: 0.1rem;
+    }
+  }
+
+  &:hover {
+    background-color: ${({ type, theme }) =>
+      type === "transparent" ? theme.secondary : "transparent"};
+    border: 1px solid
+      ${({ type, theme }) =>
+        type === "transparent" ? "transparent" : theme.secondary};
+    cursor: pointer;
+
+    .links {
+      color: ${({ type, theme }) =>
+        type === "transparent" ? "#000000" : theme.secondary};
+      font-size: 1.2em;
+    }
+  }
 `;
 
 // {

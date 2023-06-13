@@ -11,7 +11,7 @@ export const NavigationStyled = styled.div`
   padding-right: 2rem;
   /* background-color: blue; */
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.mobile}) {
     position: relative;
     display: flex;
     justify-content: end;
@@ -88,7 +88,7 @@ export const NavLinkStyled = styled.nav`
     animation: fade-in 0.8s forwards;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.mobile}) {
     border: none;
     padding: 2rem;
     border-radius: none;

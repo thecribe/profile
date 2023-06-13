@@ -26,10 +26,14 @@ const themeDefaultSettings = {
       accent: "#999999",
     },
   },
+  mobile: "1250px",
 };
 const Root = () => {
   const [mode, setMode] = useState(true);
-  const [theme, setTheme] = useState({ ...themeDefaultSettings.colors.dark });
+  const [theme, setTheme] = useState({
+    ...themeDefaultSettings.colors.dark,
+    mobile: themeDefaultSettings.mobile,
+  });
 
   const themeSwitchHandler = (mode) => {
     mode
