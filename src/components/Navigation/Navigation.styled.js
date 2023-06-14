@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavigationStyled = styled.div`
   position: fixed;
-  right: 0;
+  right: 1%;
   top: 0;
   bottom: 0;
   display: flex;
@@ -83,7 +83,7 @@ export const NavLinkStyled = styled.nav`
     right: 175%;
     top: 0;
     display: none;
-    transform: translateX(-1%);
+    transform: translateX(-5%);
     text-align: left;
     animation: fade-in 0.8s forwards;
   }

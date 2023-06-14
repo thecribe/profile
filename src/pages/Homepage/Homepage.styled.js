@@ -12,7 +12,7 @@ export const HomepageStyled = styled.div`
 `;
 
 export const SidebarStyled = styled.div`
-  flex: 2;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,5 +42,11 @@ export const SidebarStyled = styled.div`
 `;
 
 export const ContentBarStyled = styled.div`
-  flex: 5;
+  flex: 3;
+  overflow: hidden;
+
+  .content-scroll {
+    height: 100%;
+    overflow-y: scroll;
+  }
 `;

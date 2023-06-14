@@ -77,12 +77,9 @@ export const ButtonStyled = styled.button`
   }
 `;
 
-// {
-//     if (type === "btn-filled") {
-//       return ({ theme }) => theme.secondary;
-//     } else {
-//       return ({ theme }) => theme.primary;
-//     }
-//   }};
+export const Container = styled.div`
+  max-width: 60%;
+  margin: 4rem auto 0rem auto;
+`;
 
 export default DefaultStyle;
