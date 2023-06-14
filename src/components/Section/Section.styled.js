@@ -47,7 +47,7 @@ export const SectionContentStyled = styled.div`
 
   .project-count {
     display: flex;
-    width: 500px;
+    width: 80%;
     justify-content: space-between;
     margin: 3rem 0rem;
 
@@ -71,5 +71,21 @@ export const SectionContentStyled = styled.div`
     color: ${({ theme }) => theme.primary};
     margin: 3rem 0rem;
     width: 80%;
+  }
+
+  .resume {
+    border-left: 1px solid ${({ theme }) => theme.accent};
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    .project-count {
+      display: block;
+      width: fit-content;
+    }
+
+    p,
+    h2 {
+      width: 100%;
+    }
   }
 `;

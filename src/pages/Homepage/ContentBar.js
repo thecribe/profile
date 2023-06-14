@@ -4,6 +4,7 @@ import Introduction from "../../components/Section/Introduction";
 import { SectionStyled } from "../../components/Section/Section.styled";
 import About from "../../components/Section/About";
 import Resume from "../../components/Section/Resume";
+import Services from "../../components/Section/Services";
 
 const ContentBar = () => {
   return (
@@ -18,6 +19,9 @@ const ContentBar = () => {
           </SectionStyled>
           <SectionStyled>
             <Resume />
+          </SectionStyled>
+          <SectionStyled>
+            <Services />
           </SectionStyled>
         </Container>
       </div>

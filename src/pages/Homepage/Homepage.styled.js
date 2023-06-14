@@ -8,6 +8,7 @@ export const HomepageStyled = styled.div`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
     gap: 1rem;
+    height: auto;
   }
 `;
 
@@ -48,5 +49,14 @@ export const ContentBarStyled = styled.div`
   .content-scroll {
     height: 100%;
     overflow-y: scroll;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    overflow: none;
+
+    .content-scroll {
+      height: fit-content;
+      overflow-y: auto;
+    }
   }
 `;
