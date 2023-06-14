@@ -77,6 +77,13 @@ export const SectionContentStyled = styled.div`
     border-left: 1px solid ${({ theme }) => theme.accent};
   }
 
+  .skills {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
   @media (max-width: ${({ theme }) => theme.mobile}) {
     .project-count {
       display: block;
@@ -87,5 +94,8 @@ export const SectionContentStyled = styled.div`
     h2 {
       width: 100%;
     }
+  }
+
+  .skills {
   }
 `;
