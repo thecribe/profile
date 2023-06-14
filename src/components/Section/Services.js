@@ -1,6 +1,7 @@
 import React from "react";
 import { FaServicestack } from "react-icons/fa";
 import { SectionContentStyled, SectionTitleStyled } from "./Section.styled";
+import Service from "../Services/Service";
 
 const Services = () => {
   return (
@@ -10,7 +11,16 @@ const Services = () => {
           <FaServicestack className="icons" /> SERVICES
         </h5>
       </SectionTitleStyled>
-      <SectionContentStyled></SectionContentStyled>
+      <SectionContentStyled>
+        <h2>
+          My <span id="special-text"> Specialization</span>
+        </h2>
+        <div className="service">
+          <Service />
+          <Service />
+          <Service />
+        </div>
+      </SectionContentStyled>
     </>
   );
 };

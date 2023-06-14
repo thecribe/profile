@@ -5,6 +5,7 @@ import { SectionStyled } from "../../components/Section/Section.styled";
 import About from "../../components/Section/About";
 import Resume from "../../components/Section/Resume";
 import Services from "../../components/Section/Services";
+import Skills from "../../components/Section/Skills";
 
 const ContentBar = () => {
   return (
@@ -22,6 +23,9 @@ const ContentBar = () => {
           </SectionStyled>
           <SectionStyled>
             <Services />
+          </SectionStyled>
+          <SectionStyled>
+            <Skills />
           </SectionStyled>
         </Container>
       </div>
