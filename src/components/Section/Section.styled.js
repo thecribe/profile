@@ -84,6 +84,28 @@ export const SectionContentStyled = styled.div`
     flex-wrap: wrap;
   }
 
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .port {
+      border: 1px solid ${({ theme }) => theme.accent};
+      height: 30vh;
+      padding: 1rem;
+
+      &-1 {
+        grid-column: 1 / span 3;
+      }
+      &-2 {
+      }
+      &-3 {
+      }
+      &-4 {
+        grid-column: 1 / span 3;
+      }
+    }
+  }
+
   @media (max-width: ${({ theme }) => theme.mobile}) {
     .project-count {
       display: block;
@@ -94,8 +116,9 @@ export const SectionContentStyled = styled.div`
     h2 {
       width: 100%;
     }
-  }
 
-  .skills {
+    .portfolio {
+      display: block;
+    }
   }
 `;
