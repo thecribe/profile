@@ -91,6 +91,15 @@ export const SectionContentStyled = styled.div`
     .port {
       padding: 1rem;
 
+      h3 {
+        color: ${({ theme }) => theme.primary};
+        margin-top: 2rem;
+        font-weight: 400;
+        width: fit-content;
+        transition: all 0.5s ease-in-out;
+        padding-bottom: 0.1rem;
+        border-bottom: 1px solid transparent;
+      }
       &-1 {
         grid-column: 1 / span 3;
       }
@@ -123,6 +132,7 @@ export const SectionContentStyled = styled.div`
           bottom: 0;
           border-radius: 2rem;
           opacity: 0.4;
+          transition: all 0.5s ease-in-out;
         }
 
         .tags {
@@ -137,7 +147,29 @@ export const SectionContentStyled = styled.div`
             background-color: ${({ theme }) => theme.primary};
             padding: 0.5rem 1rem;
             border-radius: 3rem;
+            color: ${({ theme }) => theme.background};
+            font-weight: 400;
+            transition: all 0.5s ease-in-out;
           }
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        .inner-box {
+          &::after {
+            opacity: 0.6;
+          }
+          .tags {
+            h6 {
+              background-color: ${({ theme }) => theme.background};
+              color: ${({ theme }) => theme.primary};
+            }
+          }
+        }
+
+        h3 {
+          border-bottom: 1px solid ${({ theme }) => theme.primary};
         }
       }
     }

@@ -7,6 +7,7 @@ import Resume from "../../components/Section/Resume";
 import Services from "../../components/Section/Services";
 import Skills from "../../components/Section/Skills";
 import Portfolio from "../../components/Section/Portfolio";
+import Contact from "../../components/Section/Contact";
 
 const ContentBar = () => {
   return (
@@ -30,6 +31,9 @@ const ContentBar = () => {
           </SectionStyled>
           <SectionStyled>
             <Portfolio />
+          </SectionStyled>
+          <SectionStyled>
+            <Contact />
           </SectionStyled>
         </Container>
       </div>

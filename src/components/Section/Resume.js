@@ -20,7 +20,6 @@ const Resume = () => {
           <ResumeList />
         </div>
       </SectionContentStyled>
-      ;
     </>
   );
 };
