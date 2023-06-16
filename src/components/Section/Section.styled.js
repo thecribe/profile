@@ -89,8 +89,6 @@ export const SectionContentStyled = styled.div`
     grid-template-columns: repeat(2, 1fr);
 
     .port {
-      border: 1px solid ${({ theme }) => theme.accent};
-      height: 30vh;
       padding: 1rem;
 
       &-1 {
@@ -102,6 +100,45 @@ export const SectionContentStyled = styled.div`
       }
       &-4 {
         grid-column: 1 / span 3;
+      }
+
+      .inner-box {
+        height: 40vh;
+        border-radius: 2rem;
+        max-width: 100%;
+        position: relative;
+
+        img {
+          border-radius: 2rem;
+          object-fit: cover;
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          background-color: ${({ theme }) => theme.background};
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 2rem;
+          opacity: 0.4;
+        }
+
+        .tags {
+          position: absolute;
+          bottom: 5%;
+          left: 3%;
+          display: flex;
+          gap: 0.5rem;
+          z-index: 3;
+
+          h6 {
+            background-color: ${({ theme }) => theme.primary};
+            padding: 0.5rem 1rem;
+            border-radius: 3rem;
+          }
+        }
       }
     }
   }
