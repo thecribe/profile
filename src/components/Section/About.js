@@ -1,10 +1,16 @@
 import React from "react";
 import { FaUser } from "react-icons/fa";
-import { SectionContentStyled, SectionTitleStyled } from "./Section.styled";
+import {
+  SectionContentStyled,
+  SectionTitleStyled,
+  Spacing,
+} from "./Section.styled";
+import { forwardRef } from "react";
 
-const About = () => {
+const About = ({}, ref) => {
   return (
     <>
+      <Spacing ref={ref} />
       <SectionTitleStyled>
         <h5>
           <FaUser className="icons" /> ABOUT
@@ -28,4 +34,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default forwardRef(About);

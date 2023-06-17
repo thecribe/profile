@@ -1,13 +1,19 @@
 import React from "react";
-import { SectionContentStyled, SectionTitleStyled } from "./Section.styled";
+import {
+  SectionContentStyled,
+  SectionTitleStyled,
+  Spacing,
+} from "./Section.styled";
 import { AiOutlineMail } from "react-icons/ai";
 import { ContactStyled } from "../Contact/ContactStyled";
 
 import ContactForm from "../Contact/ContactForm";
+import { forwardRef } from "react";
 
-const Contact = () => {
+const Contact = ({}, ref) => {
   return (
     <>
+      <Spacing ref={ref} />
       <SectionTitleStyled>
         <h5>
           <AiOutlineMail className="icons" /> CONTACT
@@ -29,4 +35,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default forwardRef(Contact);

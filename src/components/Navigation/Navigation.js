@@ -3,11 +3,11 @@ import { NavLinkStyled } from "./Navigation.styled";
 import NavLinks from "./NavLinks/NavLinks";
 import Hamburger from "./Hamburger";
 
-const Navigation = () => {
+const Navigation = ({ reference, func }) => {
   return (
     <NavLinkStyled>
       <Hamburger />
-      <NavLinks />
+      <NavLinks reference={reference} func={func} />
     </NavLinkStyled>
   );
 };

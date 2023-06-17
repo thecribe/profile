@@ -1,11 +1,17 @@
 import React from "react";
-import { SectionContentStyled, SectionTitleStyled } from "./Section.styled";
+import {
+  SectionContentStyled,
+  SectionTitleStyled,
+  Spacing,
+} from "./Section.styled";
 import { GiSkills } from "react-icons/gi";
 import Skill from "../Skills/Skill";
+import { forwardRef } from "react";
 
-const Skills = () => {
+const Skills = ({}, ref) => {
   return (
     <>
+      <Spacing ref={ref} />
       <SectionTitleStyled>
         <h5>
           <GiSkills className="icons" /> SKILLS
@@ -28,4 +34,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default forwardRef(Skills);

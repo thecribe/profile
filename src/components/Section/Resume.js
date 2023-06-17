@@ -1,11 +1,17 @@
 import React from "react";
-import { SectionContentStyled, SectionTitleStyled } from "./Section.styled";
+import {
+  SectionContentStyled,
+  SectionTitleStyled,
+  Spacing,
+} from "./Section.styled";
 import { FaBox } from "react-icons/fa";
 import ResumeList from "../Resume/ResumeList";
+import { forwardRef } from "react";
 
-const Resume = () => {
+const Resume = ({}, ref) => {
   return (
     <>
+      <Spacing ref={ref} />
       <SectionTitleStyled>
         <h5>
           <FaBox className="icons" /> RESUME
@@ -24,4 +30,4 @@ const Resume = () => {
   );
 };
 
-export default Resume;
+export default forwardRef(Resume);

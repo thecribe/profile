@@ -1,10 +1,16 @@
 import React from "react";
 import { FaHome } from "react-icons/fa";
-import { SectionContentStyled, SectionTitleStyled } from "./Section.styled";
+import {
+  SectionContentStyled,
+  SectionTitleStyled,
+  Spacing,
+} from "./Section.styled";
+import { forwardRef } from "react";
 
-const Introduction = () => {
+const Introduction = ({}, ref) => {
   return (
     <>
+      <Spacing ref={ref} />
       <SectionTitleStyled>
         <h5>
           <FaHome className="icons" /> INTRODUCE
@@ -36,4 +42,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction;
+export default forwardRef(Introduction);

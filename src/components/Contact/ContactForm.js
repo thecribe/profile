@@ -12,7 +12,10 @@ const ContactForm = () => {
         <p>
           By sending a message to{" "}
           <span>
-            <a href="#" className="special-text">
+            <a
+              href="https://mailto:lawaloluwatobi128@gmail.com"
+              className="special-text"
+            >
               lawaloluwatobi128@gmail.com
             </a>
           </span>

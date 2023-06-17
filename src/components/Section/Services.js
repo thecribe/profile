@@ -1,11 +1,17 @@
 import React from "react";
 import { FaServicestack } from "react-icons/fa";
-import { SectionContentStyled, SectionTitleStyled } from "./Section.styled";
+import {
+  SectionContentStyled,
+  SectionTitleStyled,
+  Spacing,
+} from "./Section.styled";
 import Service from "../Services/Service";
+import { forwardRef } from "react";
 
-const Services = () => {
+const Services = ({}, ref) => {
   return (
     <>
+      <Spacing ref={ref} />
       <SectionTitleStyled>
         <h5>
           <FaServicestack className="icons" /> SERVICES
@@ -25,4 +31,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default forwardRef(Services);

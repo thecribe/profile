@@ -1,10 +1,16 @@
 import React from "react";
-import { SectionContentStyled, SectionTitleStyled } from "./Section.styled";
+import {
+  SectionContentStyled,
+  SectionTitleStyled,
+  Spacing,
+} from "./Section.styled";
 import { FaGripVertical } from "react-icons/fa";
+import { forwardRef } from "react";
 
-const Portfolio = () => {
+const Portfolio = ({}, ref) => {
   return (
     <>
+      <Spacing ref={ref} />
       <SectionTitleStyled>
         <h5>
           <FaGripVertical className="icons" /> PORTFOLIO
@@ -85,4 +91,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default forwardRef(Portfolio);

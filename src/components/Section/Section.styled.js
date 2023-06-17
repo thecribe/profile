@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SectionStyled = styled.div`
   /* padding: 2rem 0; */
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
 `;
 
 export const SectionTitleStyled = styled.div`
@@ -11,6 +11,7 @@ export const SectionTitleStyled = styled.div`
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   margin-bottom: 2rem;
+
   h5 {
     font-size: 0.9rem;
     font-weight: 400;
@@ -19,6 +20,10 @@ export const SectionTitleStyled = styled.div`
       margin-right: 0.5rem;
     }
   }
+`;
+
+export const Spacing = styled.div`
+  height: 5vh;
 `;
 
 export const SectionContentStyled = styled.div`
