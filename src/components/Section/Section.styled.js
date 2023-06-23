@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeInUp } from "../../animationStyled";
 
 export const SectionStyled = styled.div`
   /* padding: 2rem 0; */
@@ -33,8 +34,12 @@ export const SectionContentStyled = styled.div`
     line-height: 1.2;
     color: ${({ theme }) => theme.primary};
     margin: 3rem 0rem;
+    animation: ${fadeInUp(30, 0)} 3s forwards;
   }
 
+  h2 {
+    animation: ${fadeInUp(30, 0)} 3s forwards;
+  }
   #special-text {
     color: ${({ theme }) => theme.secondary};
   }
@@ -44,6 +49,7 @@ export const SectionContentStyled = styled.div`
     line-height: 2;
     width: 70%;
     text-align: justify;
+    animation: ${fadeInUp(30, 0)} 3s forwards;
   }
 
   .spacing {

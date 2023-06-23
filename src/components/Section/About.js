@@ -7,7 +7,7 @@ import {
 } from "./Section.styled";
 import { forwardRef } from "react";
 
-const About = ({}, ref) => {
+const About = ({ props }, ref) => {
   return (
     <>
       <Spacing ref={ref} />
@@ -18,7 +18,7 @@ const About = ({}, ref) => {
       </SectionTitleStyled>
       <SectionContentStyled>
         <h2>
-          Every great design begin with an even{" "}
+          Every great design begin with an even
           <span id="special-text">better story</span>
         </h2>
         <p>

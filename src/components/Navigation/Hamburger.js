@@ -1,8 +1,12 @@
 import React from "react";
 
-const Hamburger = () => {
+const Hamburger = (props) => {
   return (
-    <div className="hamburger">
+    <div
+      className="hamburger"
+      onClick={props.trigger}
+      style={{ visibility: props.hamburger ? "hidden" : "visible" }}
+    >
       <div className="hamburger-line"></div>
       <div className="hamburger-line"></div>
       <div className="hamburger-line"></div>

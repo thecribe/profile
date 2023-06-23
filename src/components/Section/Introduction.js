@@ -7,7 +7,7 @@ import {
 } from "./Section.styled";
 import { forwardRef } from "react";
 
-const Introduction = ({}, ref) => {
+const Introduction = ({ props }, ref) => {
   return (
     <>
       <Spacing ref={ref} />

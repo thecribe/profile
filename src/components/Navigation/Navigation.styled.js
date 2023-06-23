@@ -55,25 +55,27 @@ export const NavLinkStyled = styled.nav`
     margin: 0;
     transition: all 0.5s ease-in-out;
   }
-  li {
-    list-style: none;
-    position: relative;
+  .main-link {
+    li {
+      list-style: none;
+      position: relative;
 
-    &:not(:last-child) {
-      margin-bottom: 1rem;
-    }
-
-    &:hover {
-      #link-name {
-        font-size: 0.8em;
-        background-color: ${({ theme }) => theme.accent};
-        display: block;
-        color: ${({ theme }) => theme.primary};
-        padding: 0.2rem 0.4rem;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
       }
 
-      .icon {
-        color: ${({ theme }) => theme.secondary};
+      &:hover {
+        #link-name {
+          font-size: 0.8em;
+          background-color: ${({ theme }) => theme.accent};
+          display: block;
+          color: ${({ theme }) => theme.primary};
+          padding: 0.2rem 0.4rem;
+        }
+
+        .icon {
+          color: ${({ theme }) => theme.secondary};
+        }
       }
     }
   }
@@ -92,7 +94,8 @@ export const NavLinkStyled = styled.nav`
     border: none;
     padding: 2rem;
     border-radius: none;
-    ul {
+
+    .main-link {
       display: none;
     }
 

@@ -7,7 +7,7 @@ import {
 import { FaGripVertical } from "react-icons/fa";
 import { forwardRef } from "react";
 
-const Portfolio = ({}, ref) => {
+const Portfolio = ({ props }, ref) => {
   return (
     <>
       <Spacing ref={ref} />

@@ -8,7 +8,7 @@ import { FaBox } from "react-icons/fa";
 import ResumeList from "../Resume/ResumeList";
 import { forwardRef } from "react";
 
-const Resume = ({}, ref) => {
+const Resume = ({ props }, ref) => {
   return (
     <>
       <Spacing ref={ref} />

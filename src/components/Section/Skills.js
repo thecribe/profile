@@ -8,7 +8,7 @@ import { GiSkills } from "react-icons/gi";
 import Skill from "../Skills/Skill";
 import { forwardRef } from "react";
 
-const Skills = ({}, ref) => {
+const Skills = ({ props }, ref) => {
   return (
     <>
       <Spacing ref={ref} />

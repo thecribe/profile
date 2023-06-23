@@ -27,12 +27,14 @@ const themeDefaultSettings = {
     },
   },
   mobile: "1250px",
+  hamburger: false,
 };
 const Root = () => {
   const [mode, setMode] = useState(true);
   const [theme, setTheme] = useState({
     ...themeDefaultSettings.colors.dark,
     mobile: themeDefaultSettings.mobile,
+    hamburger: themeDefaultSettings.hamburger,
   });
 
   const themeSwitchHandler = (mode) => {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Circling } from "../../animationStyled";
 
 export const HomepageStyled = styled.div`
   height: 100vh;
@@ -27,17 +28,7 @@ export const SidebarStyled = styled.div`
     padding: 1rem;
 
     .icon {
-      animation: circling 4s linear infinite;
-    }
-  }
-
-  @keyframes circling {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-      color: ${({ theme }) => theme.secondary};
+      animation: ${({ theme }) => Circling(theme.secondary)} 4s linear infinite;
     }
   }
 `;

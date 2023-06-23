@@ -11,16 +11,6 @@ import Navigation from "../../components/Navigation/Navigation";
 import { useRef } from "react";
 
 const Homepage = () => {
-  // const reference = {
-  //   introduce: useRef(null),
-  //   about: useRef(null),
-  //   resume: useRef(null),
-  //   service: useRef(null),
-  //   skills: useRef(null),
-  //   project: useRef(null),
-  //   contact: useRef(null),
-  // };
-
   const introduceRef = useRef(null);
   const aboutRef = useRef(null);
   const resumeRef = useRef(null);

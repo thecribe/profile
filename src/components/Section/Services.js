@@ -8,7 +8,7 @@ import {
 import Service from "../Services/Service";
 import { forwardRef } from "react";
 
-const Services = ({}, ref) => {
+const Services = ({ props }, ref) => {
   return (
     <>
       <Spacing ref={ref} />

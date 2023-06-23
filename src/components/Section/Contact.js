@@ -10,7 +10,7 @@ import { ContactStyled } from "../Contact/ContactStyled";
 import ContactForm from "../Contact/ContactForm";
 import { forwardRef } from "react";
 
-const Contact = ({}, ref) => {
+const Contact = ({ props }, ref) => {
   return (
     <>
       <Spacing ref={ref} />
