@@ -69,7 +69,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<Root />}>
       <Route path="/" element={<Homepage />} />
     </Route>
-  )
+  ),
+  { basename: "/profile" }
 );
 
 const App = () => {
