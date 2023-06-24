@@ -71,6 +71,14 @@ export const SettingsBarStyled = styled.div`
       }
     }
   }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    .container {
+      .contentBox {
+        width: 100%;
+      }
+    }
+  }
 `;
 
 export const ThemeSwitchStyled = styled.button`
@@ -174,6 +182,7 @@ export const ColorBoxStyled = styled.div`
     input {
       padding: 1rem;
       font-size: 1rem;
+      display: block;
     }
 
     .btn-color {
