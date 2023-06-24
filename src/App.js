@@ -41,14 +41,25 @@ const Root = () => {
     mode
       ? setTheme({ ...theme, ...themeDefaultSettings.colors.light })
       : setTheme({ ...theme, ...themeDefaultSettings.colors.dark });
-
     setMode(!mode);
+  };
+
+  const accentHandler = (color, mode) => {
+    if (mode) {
+      let newtheme = {};
+      newtheme = { ...themeDefaultSettings.colors.dark, secondary: color };
+      setTheme({ ...theme, ...newtheme });
+    } else {
+      let newtheme = {};
+      newtheme = { ...themeDefaultSettings.colors.light, secondary: color };
+      setTheme({ ...theme, ...newtheme });
+    }
   };
 
   return (
     <ThemeProvider theme={theme}>
       <DefaultStyle />
-      <Outlet context={{ mode, themeSwitchHandler }} />
+      <Outlet context={{ mode, themeSwitchHandler, accentHandler }} />
     </ThemeProvider>
   );
 };

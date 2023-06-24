@@ -22,7 +22,11 @@ const Navigation = ({ reference, func }) => {
       )}
       <NavLinkStyled>
         <Hamburger hamburger={hamburger} trigger={() => setHarmburger(true)} />
-        <NavLinks reference={reference} func={func} />
+        <NavLinks
+          reference={reference}
+          func={func}
+          click={() => setHarmburger(false)}
+        />
       </NavLinkStyled>
     </>
   );

@@ -26,9 +26,16 @@ export const SidebarStyled = styled.div`
     top: 5%;
     left: 0;
     padding: 1rem;
+    z-index: 4;
 
     .icon {
       animation: ${({ theme }) => Circling(theme.secondary)} 4s linear infinite;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    .settings-icon {
+      top: 5px;
     }
   }
 `;
